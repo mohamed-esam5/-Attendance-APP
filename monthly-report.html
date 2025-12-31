@@ -197,11 +197,8 @@
   <script type="module">
     import { db, collection, getDocs } from "./firebase.js";
 
+    
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    if (!currentUser || !currentUser.roles || !currentUser.roles.includes("manager")) {
-      alert("❌ غير مسموح بالدخول إلا للمدير");
-      window.location.href = "index.html";
-    }
 
     let allRequests = [];
 
@@ -325,4 +322,5 @@
     loadMonthlyRequests();
   </script>
 </body>
+
 </html>
